@@ -43,15 +43,19 @@ export function PredictionsScreen({
   const [lockStatus, setLockStatus] = useState<{ [gala: number]: boolean }>({});
   const [isLocked, setIsLocked] = useState(false);
 
-  // Update predictions and lock status when changing gala
+  // Update predictions when changing gala
   useEffect(() => {
     const galaPredictions = allPredictions[selectedGala];
     setWinner(galaPredictions?.winner || '');
     setEliminated(galaPredictions?.eliminated || '');
     setProposed(galaPredictions?.proposed || []);
     setNominated(galaPredictions?.nominated || []);
+  }, [selectedGala, allPredictions]);
+
+  // Update lock status
+  useEffect(() => {
     setIsLocked(lockStatus[selectedGala] || false);
-  }, [selectedGala, allPredictions, lockStatus]);
+  }, [selectedGala, lockStatus]);
 
   // Load lock status on mount
   useEffect(() => {

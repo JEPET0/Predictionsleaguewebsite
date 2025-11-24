@@ -6,6 +6,7 @@ import { AdminScreen } from './components/AdminScreen';
 import { ResultsScreen } from './components/ResultsScreen';
 import { DebugPanel } from './components/DebugPanel';
 import { Navigation } from './components/Navigation';
+import { Button } from './components/ui/button';
 import { Toaster } from './components/ui/sonner';
 import { toast } from 'sonner@2.0.3';
 import * as api from './utils/api';
