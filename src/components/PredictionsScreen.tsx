@@ -9,9 +9,7 @@ import { toast } from 'sonner@2.0.3';
 import { ContestantSelector } from './ContestantSelector';
 import { CONTESTANTS } from '../utils/contestants';
 import { getPredictionsLock } from '../utils/api';
-import contestant1 from 'figma:asset/d35371867c591f8d45aded213eebe74bb15bfa98.png';
-import contestant2 from 'figma:asset/f195bdd615b59988ab52e2eb2afa3cdd0a1d8b94.png';
-import contestant3 from 'figma:asset/9ccaa18ce9e81d3dba72e47287042ffeadef2505.png';
+import maxDecor from '../assets/max-decor.jpg';
 
 interface Prediction {
   winner: string;
@@ -108,7 +106,7 @@ export function PredictionsScreen({
     );
   };
 
-  const totalPoints = 100 + 75 + (proposed.length * 25) + (nominated.length * 50);
+  const totalPoints = 375;
 
   const galas = Array.from({ length: 8 }, (_, i) => i + 8); // Galas 8-15
 
@@ -192,14 +190,14 @@ export function PredictionsScreen({
             </Card>
           </motion.div>
 
-          {/* Separator Image 1 */}
+          {/* Decorative separator */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.15 }}
             className="flex justify-center my-2"
           >
-            <img src={contestant1} alt="" className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
+            <img src={maxDecor} alt="Max en OT 2025" className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
           </motion.div>
 
           {/* Eliminated */}
@@ -231,14 +229,14 @@ export function PredictionsScreen({
             </Card>
           </motion.div>
 
-          {/* Separator Image 2 */}
+          {/* Decorative separator */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.25 }}
             className="flex justify-center my-2"
           >
-            <img src={contestant2} alt="" className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
+            <img src={maxDecor} alt="Max en OT 2025" className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
           </motion.div>
 
           {/* Proposed */}
@@ -271,14 +269,14 @@ export function PredictionsScreen({
             </Card>
           </motion.div>
 
-          {/* Separator Image 3 */}
+          {/* Decorative separator */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.35 }}
             className="flex justify-center my-2"
           >
-            <img src={contestant3} alt="" className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
+            <img src={maxDecor} alt="Max en OT 2025" className="w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
           </motion.div>
 
           {/* Nominated */}
@@ -323,7 +321,7 @@ export function PredictionsScreen({
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="text-white">
-                  <p className="text-sm text-white/80">Puntos disponibles</p>
+                  <p className="text-sm text-white/80">Puntos en juego</p>
                   <p className="text-3xl">⚡ {totalPoints} puntos</p>
                 </div>
               </div>

@@ -33,7 +33,7 @@ const MOCK_CONTESTANTS = [
   'Ana', 'Javier', 'Laura', 'Miguel', 'Elena', 'David'
 ];
 
-const CURRENT_GALA = 8;
+const CURRENT_GALA = 10;
 
 // Lista de administradores - añade aquí los nombres de usuario que quieres que sean admin
 const ADMIN_USERS = ['Victorr'];

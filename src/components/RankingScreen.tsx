@@ -3,9 +3,6 @@ import { Card, CardContent } from './ui/card';
 import { Avatar, AvatarFallback } from './ui/avatar';
 import { Badge } from './ui/badge';
 import { Trophy, Medal, Award, Star } from 'lucide-react';
-import contestant1 from 'figma:asset/d35371867c591f8d45aded213eebe74bb15bfa98.png';
-import contestant2 from 'figma:asset/f195bdd615b59988ab52e2eb2afa3cdd0a1d8b94.png';
-import contestant3 from 'figma:asset/9ccaa18ce9e81d3dba72e47287042ffeadef2505.png';
 
 interface Player {
   name: string;
@@ -145,20 +142,6 @@ export function RankingScreen({ players }: RankingScreenProps) {
                 <p className="text-sm text-orange-700">puntos</p>
               </div>
             </motion.div>
-          </motion.div>
-        )}
-
-        {/* Separator Images */}
-        {sortedPlayers.length > 3 && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
-            className="flex justify-center gap-4 my-8"
-          >
-            <img src={contestant1} alt="" className="w-16 h-16 md:w-20 md:h-20 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
-            <img src={contestant2} alt="" className="w-16 h-16 md:w-20 md:h-20 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
-            <img src={contestant3} alt="" className="w-16 h-16 md:w-20 md:h-20 rounded-2xl shadow-2xl border-4 border-white/70 object-cover hover:scale-110 transition-transform" />
           </motion.div>
         )}
 

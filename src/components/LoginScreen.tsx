@@ -4,9 +4,6 @@ import { Input } from './ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { motion } from 'motion/react';
 import { Sparkles, Trophy, Music, Star } from 'lucide-react';
-import contestant1 from 'figma:asset/d35371867c591f8d45aded213eebe74bb15bfa98.png';
-import contestant2 from 'figma:asset/f195bdd615b59988ab52e2eb2afa3cdd0a1d8b94.png';
-import contestant3 from 'figma:asset/9ccaa18ce9e81d3dba72e47287042ffeadef2505.png';
 
 interface LoginScreenProps {
   onLogin: (username: string, password: string) => void;
@@ -56,31 +53,6 @@ export function LoginScreen({ onLogin, onRegister }: LoginScreenProps) {
           className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-full blur-3xl"
         />
       </div>
-
-      {/* Floating contestant images */}
-      <motion.div
-        animate={{ y: [0, -20, 0], rotate: [-5, 5, -5] }}
-        transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-20 left-2 md:left-10"
-      >
-        <img src={contestant1} alt="" className="w-20 h-20 md:w-32 md:h-32 rounded-xl md:rounded-2xl shadow-2xl border-3 md:border-4 border-white/50 object-cover" />
-      </motion.div>
-      
-      <motion.div
-        animate={{ y: [0, 20, 0], rotate: [5, -5, 5] }}
-        transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-        className="absolute bottom-32 right-2 md:right-10"
-      >
-        <img src={contestant2} alt="" className="w-20 h-20 md:w-32 md:h-32 rounded-xl md:rounded-2xl shadow-2xl border-3 md:border-4 border-white/50 object-cover" />
-      </motion.div>
-
-      <motion.div
-        animate={{ y: [0, -15, 0], rotate: [-3, 3, -3] }}
-        transition={{ duration: 4.5, repeat: Infinity, delay: 0.5 }}
-        className="absolute top-1/3 right-4 md:right-20 opacity-70 md:opacity-100"
-      >
-        <img src={contestant3} alt="" className="w-16 h-16 md:w-28 md:h-28 rounded-xl md:rounded-2xl shadow-2xl border-3 md:border-4 border-white/50 object-cover" />
-      </motion.div>
 
       {/* Floating stars */}
       <motion.div

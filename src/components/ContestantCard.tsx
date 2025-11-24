@@ -1,4 +1,3 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { User } from 'lucide-react';
 
 interface ContestantCardProps {
@@ -45,7 +44,7 @@ export function ContestantCard({
         }`}
       >
         {photo ? (
-          <ImageWithFallback
+          <img
             src={photo}
             alt={name}
             className="w-full h-full object-cover"
